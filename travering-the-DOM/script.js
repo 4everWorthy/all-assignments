@@ -8,7 +8,7 @@ const sec = document.querySelectorAll('section');
         // A NodeList is a collection of DOM nodes. It is similar to an array but is not exactly the same. It can be live or static.
 
 const currentSec = document.querySelector('section.current')
-// The selector '.current' targets the section with the class "current"
+// '.current' targets the section with the class "current"
     // Calls document.querySelector method with .current as an argument
 
 const afterCurrent = currentSec.nextElementSibling
@@ -20,13 +20,14 @@ const hTwo = currentSec.previousElementSibling.children[0]
     // The querySelector('h2') method is then used to select the <h2> element within that previous section.
 
 const fullDiv = currentSec.parentElement
-// The querySelector('h2.highlight') method is used to select the <h2> element with the class "highlight". 
-    // The closest('div') method is then used to find the nearest ancestor <div> element containing that <h2>.
+// currentSec.parentElement points to the <div class="col"> element, which is the parent of the <section class="current">.
 
 const h2Sections = Array.from(document.querySelectorAll('h2')).map(function(h2){return h2.parentElement})
-// This consolidates the retrieval of all sections with headers
-    // The querySelectorAll method can be used with a CSS pseudo-class to select all <section> elements that contain an <h2> element.
-        // This is a convenient way to filter elements based on their descendants.
+// This consolidates the retrieval of all sections containing <h2> elements.
+    // The querySelectorAll method selects all <h2> elements.
+        // The Array.from method converts the NodeList returned by querySelectorAll into an array.
+            // The map function iterates over each <h2> element, returning its parent element (the <section>).
+                // This is a convenient way to collect all sections that contain <h2> elements.
 
 console.log(header)
 console.log(sec)
