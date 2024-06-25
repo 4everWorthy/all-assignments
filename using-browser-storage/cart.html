@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <form id="addItemForm">
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" required>
+    <label for="itemPrice">Item Price:</label>
+    <input type="number" step="0.01" id="itemPrice" name="itemPrice" required>
+    <button type="submit">Add Item</button>
+  </form>
+
+  <button id="displayCartButton">Display Cart</button>
+  
+  <div id="cartContents"></div> <!-- Div to display the cart contents -->
+
+  <script src="cartApp.js"></script>
+</body>
+</html>
